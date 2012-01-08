@@ -1,0 +1,107 @@
+// Imports -------------------------------------------------------------------
+
+@import "base";
+@import "compass/utilities";
+@import "compass/css3";
+
+@include font-face("Shit Happens", font-files("images/wedding.otf", opentype));
+
+$darkpink : #ffa0a0;
+
+/* Layout ------------------------------------------------------------------*/
+
+#frontpage {
+  @include container;
+
+  //@include susy-grid-background;
+  background: #ffeeef;
+
+  @include box-shadow(grey 5px 5px 20px);
+  padding-bottom: 1.5em;
+
+  h3 {
+    margin: 0em;
+  }
+  h4 {
+    font-family: arial;
+    font-size: 0.3em;
+    margin-top: 0em;
+    margin-bottom: 1em;
+  }
+
+  div[role="main"] {
+    @include full;
+    text-align: center;
+    font-family: "Shit Happens";
+    font-size: 5em;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      @include box-shadow(grey 7px 7px 7px);
+    }
+
+    p {
+      margin-top: 0em;
+      margin-bottom: 0em;
+    }
+
+    div {
+      @include box-shadow($darkpink 5px 5px 20px);
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      margin-top: 0em;
+      background: white;
+    }
+
+    #swedish {
+      @include columns(5.5,12);
+      @include alpha;
+    }
+
+    #english {
+      @include columns(5.5,12);
+      @include omega;
+    }
+  }
+}
+
+#page {
+  @include container;
+  @include susy-grid-background;
+
+  /* Header --------------------------------------------------------------*/
+
+  h1 {
+    @include full;
+  }
+
+  /* Nav --------------------------------------------------------------*/
+
+  nav {
+    @include columns(3);
+    @include alpha;
+  }
+
+  /* Content --------------------------------------------------------------*/
+
+  div[role="main"] {
+    @include columns(9);
+    @include omega;
+    article {
+      @include columns(6,9);
+    }
+    aside {
+      @include columns(3,9);
+      @include omega(9);
+    }
+  }
+
+  /* Footer --------------------------------------------------------------*/
+
+  footer {
+    @include full;
+    @include pad(3,3);
+  }
+}

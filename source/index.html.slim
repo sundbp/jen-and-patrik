@@ -1,0 +1,15 @@
+- content_for :head do
+    title Jennifer och Patrik's bröllop | Jennifer and Patrik's wedding
+
+h3 Jennifer + Patrik
+h4 2012-07-14
+
+#swedish
+  p Svenska
+  p
+    == link_to('/sv') { image_tag 'swedish_flag.gif', :width => '200', :class => 'flag' }
+
+#english
+  p English
+  p
+    == link_to('/en') { image_tag 'english_flag.gif', :width => '200', :class => 'flag' }
