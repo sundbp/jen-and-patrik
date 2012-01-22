@@ -3,11 +3,40 @@ html
   head
     meta charset="utf-8"
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+    == favicon_tag 'favicon.ico'
 
     == stylesheet_link_tag "screen.css"
 
-    == yield_content :head
+  title ="Jennifer and Patrik's wedding - #{yield_content :title}"
 
   body class=page_classes
-    div id="main" role="main"
-      == yield
+    #page
+      #jenandpatrik
+       == link_to('/sv') { image_tag 'jen_patrik_bw.jpg', :width => '100%' }
+
+      #banner
+       == link_to('/sv') { image_tag 'flower_banner2.jpg', :width => '100%' }
+
+      nav
+        //ul
+        //  li
+        //    hr
+        //  li==link_to('Översiktlig plan', '/sv/plan')
+        //  li
+        //    hr
+        //  li==link_to('Reseinformation', '/sv/reseinformation')
+        //  li==link_to('Boende', '/sv/boende')
+        //  li==link_to('Sverigemiddag', '/sv/sverigemiddag')
+        //  li==link_to('Kyrka och vigsel', '/sv/kyrka')
+        //  li==link_to('Bröllopsmiddag', '/sv/brollopsmiddag')
+        //  li==link_to('Brunch', '/sv/brunch')
+        //  li==link_to('Presenter', '/sv/presenter')
+        //  li
+        //    hr
+        //  li==link_to('Våra kontaktuppgifter', '/sv/kontaktuppgifter')
+
+      div id="main" role="main"
+        == yield
+
+    footer
+      | &#64; 2012 Vanna Volga Productions
