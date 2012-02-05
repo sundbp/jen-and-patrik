@@ -12,31 +12,30 @@ html
   body class=page_classes
     #page
       #jenandpatrik
-       == link_to('/sv') { image_tag 'jen_patrik_bw.jpg', :width => '100%' }
+       == link_to('/en') { image_tag 'jen_patrik_bw.jpg', :width => '100%' }
 
       #banner
-       == link_to('/sv') { image_tag 'flower_banner2.jpg', :width => '100%' }
+       == link_to('/en') { image_tag 'flower_banner2.jpg', :width => '100%' }
 
       nav
-        //ul
-        //  li
-        //    hr
-        //  li==link_to('Översiktlig plan', '/sv/plan')
-        //  li
-        //    hr
-        //  li==link_to('Reseinformation', '/sv/reseinformation')
-        //  li==link_to('Boende', '/sv/boende')
-        //  li==link_to('Sverigemiddag', '/sv/sverigemiddag')
-        //  li==link_to('Kyrka och vigsel', '/sv/kyrka')
-        //  li==link_to('Bröllopsmiddag', '/sv/brollopsmiddag')
-        //  li==link_to('Brunch', '/sv/brunch')
-        //  li==link_to('Presenter', '/sv/presenter')
-        //  li
-        //    hr
-        //  li==link_to('Våra kontaktuppgifter', '/sv/kontaktuppgifter')
+        ul
+         li
+           hr
+         li==link_to('Overall plan', '/en/plan')
+         li
+           hr
+         li==link_to('Travel info', '/en/travel')
+         li==link_to('Accomodation', '/en/accomodation')
+         li==link_to('Church and wedding', '/en/church')
+         li==link_to('Wedding dinner', '/en/dinner')
+         li==link_to('Brunch', '/en/brunch')
+         li==link_to('Wedding list', '/en/presents')
+         li
+           hr
+         li==link_to('Contact us', '/en/contact')
 
       div id="main" role="main"
         == yield
 
     footer
-      | &#64; 2012 Vanna Volga Productions
+      center &#64; 2012 Vanna Volga Productions
