@@ -135,6 +135,12 @@ body {
         color: #666;
       }
 
+      h3 {
+        @include full;
+        font-size: 16px;
+        color: #666;
+      }
+
       p {
         @include full;
         color: #666;
@@ -167,10 +173,8 @@ body {
 /* Footer --------------------------------------------------------------*/
 
 footer {
-  @include pad(0,2);
   padding-top: 0.5em;
   padding-bottom: 1em;
-  @include float-right;
   color: #777;
   font-size: 12px;
   font-family: 'Helvetica Neue', 'Helvetica';
