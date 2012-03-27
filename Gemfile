@@ -7,4 +7,5 @@ gem 'compass-susy-plugin'
 
 group :development do
   gem 'rb-fsevent'
+  gem 'therubyracer'
 end
